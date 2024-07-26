@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Control Page</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+        <script src="index - Copy.js" type="text/JavaScript"></script>
+    </head>
+    <body>
+    <center>
+        <div name="pageTitle">
+            <br>
+            <h1>AQUA</h1>
+            <h1>BOT</h1>
+            <br>
+        </div>
+        <div name="cam">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/YE_OPMpHgCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        </div>
+        <div class="main">
+            <!-- First Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <!-- <p>Connect to server</p>
+                    <input type="checkbox" id="connect" name="connect" value="connect" onchange="connectF(this)"> -->
+                    <p>pH Level : </p>
+                    <label name="pH" id="pH"> ... </label>
+                </div>                
+            </div>             
+            <!-- First Card End -->
+            <!-- First Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Turbidity : </p>
+                    <label name="turbidity" id="Turbidity"> ... </label>
+                    <label> ntu</label>
+                </div>                
+            </div>             
+            <!-- First Card End -->
+            <!-- First Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Battery Level : </p>
+                    <label name="voltage" id="BatteryLevel"> ... </label>
+                    <label> %</label>
+                </div>                
+            </div>             
+            <!-- First Card End -->
+            <!-- First Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Space Left in bin :</p>
+                    <label name="distance" id="Distance"> ... </label>  
+                    <label> cm</label> 
+                </div>                
+            </div>             
+            <!-- First Card End -->
+            <!-- First Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Weight of trash : </p>
+                    <label name="weight" id="Weight"> ... </label>    
+                    <label> g</label>
+                </div>                
+            </div>             
+            <!-- First Card End -->
+        </div><br><br>
+        <div class = "main">
+            <!-- Second Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Switch on LED</p>
+                    <input type="checkbox" id="led" name="led" value="led" onchange="ledF(this)" class="larger-checkbox">
+                    <span class="checkmark"></span>
+                </div>                
+            </div>  
+            <!-- Second Card End -->
+            <!-- Second Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Right Motor</p>
+                    <input type="checkbox" id="right" name="right" value="right" onchange="rightF(this)" class="larger-checkbox">
+                    <span class="checkmark"></span>
+                </div>                
+            </div>  
+            <!-- Second Card End -->
+            <!-- Second Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Start Boat</p>
+                    <div class="slider"><input type="range" id="Start" min="0" max="240" value="0" step="1" onchange="startF(this.value)" oninput="startMotor.innerText = this.value">
+                    <p id="startMotor">0</p></div></td>
+                </div>                
+            </div>  
+            <!-- Second Card End -->
+            <!-- Second Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+                    <p>Left Motor</p>
+                    <input type="checkbox" id="left" name="left" value="left" onchange="leftF(this)" class="larger-checkbox">
+                    <span class="checkmark"></span>
+                </div>                
+            </div>  
+            <!-- Second Card End -->
+            <!-- Second Card Start -->
+            <div class="facilitiescard">
+                <div class="card-text">
+
+                </div>                
+            </div>  
+            <!-- Second Card End -->
+        </div>
+    </center>
+    </body>
+</html>

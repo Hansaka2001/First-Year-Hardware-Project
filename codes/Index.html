@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Control Page</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+        <script src="index.js" type="text/JavaScript"></script>
+    </head>
+    <body>
+    <center>
+        <div name="pageTitle">
+            <p name="pageTitle">Control Pannel</p>
+        </div>
+        <div name="cam">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/YE_OPMpHgCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        </div>
+        <div name="Controls">
+            <table>
+                <tr>
+                    <th>Connect to server</th>
+                    <td><input type="checkbox" id="connect" name="connect" value="connect" onchange="connectF(this)"></td>
+                </tr>
+                <tr>
+                    <th>Start Boat</th>
+                    <td><input type="checkbox" id="start" name="start" value="start" onchange="startF(this)"></td>
+                </tr>
+                <tr>
+                    <th>Right Motor</th>
+                    <!-- <td><div class="slider"><input type="range" min="0" max="240" value="0" step="1" oninput="rightMotor.innerText = this.value">
+                    <p id="rightMotor">100</p></div></td>             -->
+                    <td><div class="slider"><input type="range" id="Right" min="0" max="240" value="0" step="1" onchange="rightF(this.value)" oninput="rightMotor.innerText = this.value">
+                    <p id="rightMotor">0</p></div></td>
+                </tr>
+                <tr>
+                    <th>Left Motor</th>
+                    <!-- <td colspan="2"><input type="text" name="leftMotor" length="25" size="40"></td> -->
+                    <td><div class="slider"><input type="range" id="Left" min="0" max="240" value="0" step="1" onchange="leftF(this.value)" oninput="leftMotor.innerText = this.value">
+                        <p id="leftMotor">0</p></div></td>  
+                </tr>
+                <tr>
+                    <th>Switch on LED</th>
+                    <td><input type="checkbox" id="led" name="led" value="led" onchange="ledF(this)"></td>
+                </tr>
+                <tr>
+                    <th>pH Level : </th>
+                    <td colspan="2"><label name="pH" id="pH"> ... </label></td>
+                </tr>
+                <tr>
+                    <th>Turbidity : </th>
+                    <td colspan="2"><label name="turbidity" id="Turbidity"> ... </label></td>
+                </tr>
+                <tr>
+                    <th>Space Left till bin is full : </th>
+                    <td colspan="2"><label name="distance" id="Distance"> ... </label></td>
+                </tr>
+                <tr>
+                    <th>Weight of trash : </th>
+                    <td colspan="2"><label name="weight" id="Weight"> ... </label></td>
+                </tr>
+                <tr>
+                    <th>Battery Level : </th>
+                    <td colspan="2"><label name="voltage" id="BatteryLevel"> ... </label></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </body>
+</html>
